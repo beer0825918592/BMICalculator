@@ -1,0 +1,45 @@
+{
+  "project_info": {
+    "project_number": "40943063133",
+    "firebase_url": "https://fir-arduino-14023.firebaseio.com",
+    "project_id": "fir-arduino-14023",
+    "storage_bucket": "fir-arduino-14023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40943063133:android:b26f53b55600073a",
+        "android_client_info": {
+          "package_name": "com.example.bmicalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40943063133-jk2gacika63jsqsgus15tp923krsudcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADdaDpdfHMqSHiBuEZenD-M-3Zfzqve8E"
+        },
+        {
+          "current_key": "AIzaSyADdaDpdfHMqSHiBuEZenD-M-3Zfzqve8E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
