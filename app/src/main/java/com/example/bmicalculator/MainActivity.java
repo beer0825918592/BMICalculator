@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.bmicalculator.model.Body;
+
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,29 +30,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText heightEditText=findViewById(R.id.heightbutton);
                 EditText weightEditText=findViewById(R.id.weightbutton);
+               // Body body=new Body();
+            //    body.height=Integer.parseInt(heightEditText.getText().toString());
+             //   body.weight=Integer.parseInt(weightEditText.getText().toString());
                 int h = Integer.parseInt(heightEditText.getText().toString());
                 int w = Integer.parseInt(weightEditText.getText().toString());
-               float bmi= calculateBmi(h,w);
-               String msg ="ค่า ฺ Bmi เท่ากับ "+String.format(Locale.US,"%.2f",bmi);
+                Body body=new Body(h,w);
+               float bmi= body.calculateBmi();
 
 
-               String resultText=null;
-               if(bmi <18.5){
-                   resultText="ผอมเกินไป";
-               }else if(bmi<25){
-                   resultText="น้ำหนักปกติ ไม่อ้วนไม่ผอม";
-               }else if(bmi<30){
-                   resultText="อ้วน";
-               }else{
-                   resultText="อ้วนมาก";
-               }
-                String msg_resultText="เนำ้หนักของคุณอยู่ในเกกณฑ์ : "+resultText;
+                String msg_resultText="เนำ้หนักของคุณอยู่ในเกกณฑ์ : "+body.getResultText();
               /* // Toast 1
                 Toast t = Toast.makeText(MainActivity.this,msg, Toast.LENGTH_SHORT);
                 t.show();*/
 
                 //Toast 2
-                Toast.makeText(MainActivity.this,resultText, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,body.getResultText(), Toast.LENGTH_SHORT).show();
             /*    // dialog 1
                 AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
                 dialog.setTitle("Result ");
@@ -83,11 +78,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    private float calculateBmi(int heightInCm,int weightInKg){
+  /*  private float calculateBmi(int heightInCm,int weightInKg){
         // bmi = kg/m^2
         float height=heightInCm/100f;
         Log.i(TAG,"ความสูงหน่อยเมตร = "+String.valueOf(height));
         return weightInKg/(height*height);
 
-    }
+    }*/
 }
